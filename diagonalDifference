@@ -1,0 +1,26 @@
+def diagonalDifference(arr):
+    # Write your code here    
+    same_diag = 0
+    diff_diag = 0
+    n = len(arr)-1
+    for i in range(len(arr)):
+        same_diag += arr[i][i]
+        diff_diag += arr[n-i][i]
+        
+                
+    return abs(same_diag - diff_diag)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
