@@ -1,0 +1,14 @@
+def weighted_mean(numbers, weig):
+    weight_coll = []
+    for i in range(len(numbers)):
+        weight_coll.append(numbers[i]*weig[i])
+    print(round(sum(weight_coll)/sum(weig), 1))
+    
+
+
+no =input()
+nums = input()
+weights = input()
+nums= list(map(int, nums.split()))
+weights = list(map(int, weights.split()))
+weighted_mean(nums, weights)
