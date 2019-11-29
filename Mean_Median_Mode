@@ -1,0 +1,33 @@
+def stats(num):
+########### MODE ##################################################
+    mean_=0
+    n = len(num)
+    num_ = sorted(num)
+
+    for i in range(len(num)):
+        mean_+=num[i]
+    print (mean_/n)
+###################   MEDIAN  ###########################################   
+    if len(num) %2 !=0: 
+        num_ = sorted(num)
+        num1 = int((n+1)/2)
+        print(num_[num1-1])
+    else:
+        ind_1= int(len(num_)/2)
+        ind_2= int(len(num_)/2)-1
+        print((num_[ind_1] + num_[ind_2])/2)
+        
+ ################## The code below calcualtes the mode ###########################    
+    dict_set = {}
+    for i in range(len(num_)):
+        if num_[i] in dict_set:
+            dict_set[num_[i]]+= 1
+        else:
+            dict_set[num_[i]]=1
+    max_val, max_item =-1e100, None
+    for key,val in dict_set.items():
+        if val > max_val:
+            max_item = key
+            max_val = val
+    print(max_item)
+            
