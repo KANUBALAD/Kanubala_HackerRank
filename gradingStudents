@@ -1,0 +1,8 @@
+def gradingStudents(grades):
+    # Write your code here
+    def gradingStudents(grades):
+    compare_grade = int(grades/5)*5 +5
+    if (grades>=38) and (compare_grade- grades) < 3:
+        return compare_grade
+    else:
+        return grades
