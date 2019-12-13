@@ -1,0 +1,16 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    apple_dist = []
+    orange_dist=[]
+    sum_apple=0
+    sum_orange=0
+    for i in range(len(apples)):
+        dist= apples[i]+ a
+        if dist >=7 and dist <=10:
+            sum_apple+=1 
+
+    for j in range(len(oranges)):
+        orange_dist= oranges[j]+b
+
+        if orange_dist >=t and dist <=s:
+            sum_orange+=1
+    return sum_apple, sum_orange
