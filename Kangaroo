@@ -1,0 +1,12 @@
+def kangaroo(x1, v1, x2, v2):
+    if x1 < x2 and v1 <= v2:
+        return "NO"
+    
+    while True:
+            
+        if x1 == x2:
+            return "YES"
+        elif x1 > x2:
+            return "NO"
+        x1 = x1 + v1
+        x2 = x2 + v2
