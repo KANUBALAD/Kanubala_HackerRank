@@ -1,0 +1,23 @@
+def getTotalX(a, b):
+    divisibles = []
+    for i in range(min(a),min(b)+1):
+        tracker = True
+        for j in a:
+            if i % j != 0:
+                tracker = False
+                break
+        if tracker:
+            divisibles.append(i)
+    
+    sum_twosets = []
+    
+    for div in divisibles:
+        tracker1 = True
+        for i in b:
+            print("divisibles",divisibles)
+            if i% div !=0:
+                tracker1 = False
+                break
+        if tracker1:
+            sum_twosets.append(div)
+    return len(sum_twosets)
