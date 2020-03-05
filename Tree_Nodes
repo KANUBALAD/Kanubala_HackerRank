@@ -1,0 +1,30 @@
+class Node():
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self. right = None
+        
+    def insert(self, data):
+        if self.data:
+            if self.data < data:
+                if self.left == None:
+                    self.left = Node(data)
+                else:
+                    self.left.insert(data)
+            else:
+                if self.right == None:
+                    self.right = Node(data)
+                else:
+                    self.right.insert(data)             
+        else :
+            self.data = Node(data)
+         
+    def Print_(self):
+        if self.left != None:
+            self.left.Print_()
+            
+        if self.right != None:
+            self.right.Print_()
+        print(self.data)
+        
+        
