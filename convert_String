@@ -1,0 +1,6 @@
+def convert_String(S):
+    try:
+        print (int(S))
+    except:
+        print ("Value Error")
+convert_String("abs")   
